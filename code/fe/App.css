@@ -1,0 +1,279 @@
+/* ============================================================
+   Layout
+   ============================================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ede9fe 0%, #e0e7ff 100%);
+}
+
+/* ============================================================
+   Home page
+   ============================================================ */
+
+.home {
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.home h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3730a3;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.nav-cards {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-card {
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  width: 190px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.nav-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.18);
+}
+
+.card-icon { font-size: 2rem; }
+
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4f46e5;
+}
+
+.card-desc {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ============================================================
+   View wrapper
+   ============================================================ */
+
+.view {
+  max-width: 640px;
+  width: 100%;
+}
+
+.view h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3730a3;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   Back button
+   ============================================================ */
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.15s;
+}
+
+.back-btn:hover { color: #3730a3; }
+
+/* ============================================================
+   Forms
+   ============================================================ */
+
+.card-form {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.card-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card-form input,
+.card-form select,
+.card-form textarea {
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  color: #1f2937;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  resize: vertical;
+  background: #fafafa;
+}
+
+.card-form input:focus,
+.card-form select:focus,
+.card-form textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: #fff;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  align-self: flex-start;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3730a3;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+.btn-delete:hover { background: #fca5a5; }
+
+/* ============================================================
+   Item list
+   ============================================================ */
+
+.item-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.item-row {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.item-title {
+  font-size: 0.95rem;
+  color: #1f2937;
+  word-break: break-word;
+}
+
+/* ============================================================
+   Status badges
+   ============================================================ */
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-notstarted { background: #f3f4f6; color: #6b7280; }
+.badge-progress   { background: #fef3c7; color: #d97706; }
+.badge-done       { background: #d1fae5; color: #065f46; }
+
+/* ============================================================
+   Alerts / feedback
+   ============================================================ */
+
+.alert {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.alert-success { background: #d1fae5; color: #065f46; }
+.alert-error   { background: #fee2e2; color: #991b1b; }
+
+/* ============================================================
+   Misc
+   ============================================================ */
+
+.loading  { color: #6b7280; font-style: italic; }
+.empty-msg { color: #9ca3af; text-align: center; padding: 2rem 0; }
+
+.message-form { margin-bottom: 0.5rem; }
